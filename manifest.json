@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "MyAutoLoginScript",
+    "description": "Automatically log in to the web learning website.",
+    "version": "1.0",
+    "author": "Euphoria",
+    "content_scripts": [
+        {
+            "js": [
+                "jquery-3.6.4.min.js",
+                "autologin.js"
+            ],
+            "matches": [
+                "https://learn.tsinghua.edu.cn/f/login",
+                "https://learn.tsinghua.edu.cn/f/login.do?status=BAD_CREDENTIALS"
+            ]
+        },
+        {
+            "js": [
+                "jquery-3.6.4.min.js",
+                "redirect.js"
+            ],
+            "matches": [
+                "https://learn.tsinghua.edu.cn/*"
+            ]
+        }
+    ]
+}
